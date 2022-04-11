@@ -119,8 +119,7 @@ async def get_metoffice_by_search_criteria(
             
             metoffice_data_list.append(metoffice_json)
         if search_criteria.type == "ranked":        
-            # metoffice_data_list = sorted(metoffice_data_list, key=lambda d: d['jan'], reverse=True) 
-            metoffice_data_list = sorted(metoffice_data_list, key=lambda d: (d['jan'],d['feb'],d['mar'],d['apr'],d['may'],d['jun'],d['jul'],d['aug'],d['sep'],d['oct'],d['nov'],d['dec'],d['win'],d['sum'],d['aut'],d['ann'],d['spr']), reverse=True)
+             metoffice_data_list = sorted(metoffice_data_list, key=lambda d: d['jan'], reverse=True)
         
         
         
