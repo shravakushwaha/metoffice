@@ -1,8 +1,8 @@
 """init
 
-Revision ID: 9cbc3d3d0f5a
+Revision ID: a221d999c4fa
 Revises: 
-Create Date: 2022-04-10 13:39:16.369186
+Create Date: 2022-04-27 22:47:22.724073
 
 """
 from alembic import op
@@ -11,7 +11,7 @@ import sqlmodel
 
 
 # revision identifiers, used by Alembic.
-revision = '9cbc3d3d0f5a'
+revision = 'a221d999c4fa'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,7 +22,7 @@ def upgrade():
     op.create_table('metofiice',
     sa.Column('modified_on', sa.DateTime(), nullable=True),
     sa.Column('id', sa.Integer(), nullable=True),
-    sa.Column('years', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
+    sa.Column('years', sa.Integer(), nullable=True),
     sa.Column('jan', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('feb', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('mar', sqlmodel.sql.sqltypes.AutoString(), nullable=True),

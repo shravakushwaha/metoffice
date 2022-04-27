@@ -12,7 +12,7 @@ from ...commons import enums
 
 class CreateMetoffice(BaseModel):
     id: Optional[int]
-    years: str                                           
+    years: int                                           
     jan: Optional[str]
     feb: Optional[str]
     mar: Optional[str]
